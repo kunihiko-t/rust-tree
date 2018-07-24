@@ -2,7 +2,7 @@
 
 rust-tree is a tree command for my Rust practice.
 
-#Install 
+# Install 
 
 cargo install --git https://github.com/kunihiko-t/rust-tree
 

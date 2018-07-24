@@ -4,5 +4,4 @@ version = "0.1.0"
 authors = ["Kunihiko Tanaka <inverse.of.void.matrix@gmail.com>"]
 
 [dependencies]
-itertools = "0.7.3"
 clap = "2"
