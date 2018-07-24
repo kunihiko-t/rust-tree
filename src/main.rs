@@ -33,8 +33,14 @@ fn main() {
 
     if let Some(directory) = matches.values_of("path") {
         directory.for_each(|dir| {
-            let path = fs::canonicalize(dir).unwrap();
-            tree(&path.as_path(), "", &flags);
+            let path = fs::canonicalize(dir);
+            match path {
+                Ok(path) => tree(&path.as_path(), "", &flags),
+                Err(e) => {
+                    println!("{}", e);
+                    process::exit(1);
+                }
+            }
         });
     } else {
         //Display current directory
